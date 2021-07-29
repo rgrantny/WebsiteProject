@@ -1,50 +1,46 @@
-h1 {
-  margin: 0;
+
+.wrapper {
+  display: flex;  
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: left; 
 }
 
-.big-heading {
-  font-family: Verdana;
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
 }
 
-.section-heading {
-  /* Add your own font here */
+.header {
+  background: tomato;
 }
 
-.nav__list {
-
+.main {
+  text-align: left;
+  background: white;
 }
 
-.nav__list_item {
-
+.aside-1 {
+  background-color: black;
+  color: white;
 }
 
-.page {
-
+.aside-2 {
+  background-color: black;
+  color: white;
 }
 
-.page__header {
-  background-color: aqua;
-
-}
-.page__content {
-  background-color: beige;
-
+@media all and (min-width: 600px) {
+  .aside { flex: 1 0 0; }
 }
 
-.left-content {
-  background-color: burlywood;
-
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+  .aside-1 { order: 1; } 
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
 }
 
-.right-content {
-  background-color: burlywood;
-}
-
-.main-content {
-
-}
-
-.main-content__section {
-  background-color: cornsilk;
-
+body {
+  padding: 2em; 
 }
